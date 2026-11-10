@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi tarjeta</title>
+    <style>
+      :root {
+        --fondo: #f3f4f6;
+        --boton: #2563eb;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        font-size: 62.5%;
+      }
+
+      body {
+        min-height: 100vh;
+        margin: 0;
+        padding: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        background-color: var(--fondo);
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+      }
+
+      .card {
+        width: 100%;
+        max-width: 30rem;
+        padding: 2rem;
+        background-color: white;
+        border-radius: 2rem;
+      }
+
+      .profile-image {
+        width: 7rem;
+        height: 7rem;
+        position: relative;
+        background-color: var(--boton);
+        border-radius: 50%;
+      }
+
+      p {
+        line-height: 1.5;
+        color: #6b7280;
+      }
+
+      button {
+        padding: 1rem 1.5rem;
+        border: none;
+        border-radius: 1rem;
+        background-color: var(--boton);
+        color: white;
+        cursor: pointer;
+      }
+
+      /* En teléfonos se muestra solamente la primera tarjeta */
+      @media (max-width: 600px) {
+        .card:not(:first-child) {
+          display: none;
+        }
+
+        .card {
+          max-width: 32rem;
+        }
+      }
+    </style>
+</head>
+<body>
+     <div class="card">
+
+    <div class="profile-image">
+
+    </div>
+
+    <h2>Mathiew Lopez</h2>
+
+    <p>
+      Desarrollador frontend aprendiendo HTML y CSS.
+    </p>
+
+    <button>
+      Seguir
+    </button>
+
+  </div>
+  <div class="card">
+
+    <div class="profile-image">
+
+    </div>
+
+    <h2>Mathiew Lopez</h2>
+
+    <p>
+      Desarrollador frontend aprendiendo HTML y CSS.
+    </p>
+
+    <button>
+      Seguir
+    </button>
+
+  </div>
+  <div class="card">
+
+    <div class="profile-image">
+
+    </div>
+
+    <h2>Mathiew Lopez</h2>
+
+    <p>
+      Desarrollador frontend aprendiendo HTML y CSS.
+    </p>
+
+    <button>
+      Seguir
+    </button>
+
+  </div>
+</body>
+</html>
