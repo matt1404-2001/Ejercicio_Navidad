@@ -1,0 +1,44 @@
+
+.tarjeta-uno .card-container {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 120px;
+    font-weight: bold;
+    width: 400px;
+    height: 250px;
+    margin: 50px auto;
+    border-radius: 10px;
+    perspective: 1400px;
+}
+
+.tarjeta-uno .card {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    transform-style: preserve-3d;
+}
+
+.tarjeta-uno .front,
+.tarjeta-uno .back {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+}
+
+.tarjeta-uno .front {
+    color: #fff;
+    background: #2196f3;
+}
+
+.tarjeta-uno .back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotateY(180deg);
+    color: #2196f3;
+    background: #fff;
+}

@@ -1,0 +1,192 @@
+
+.tarjeta-tres {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 40px 10px;
+}
+
+.tarjeta-tres .container {
+    width: 600px;
+    height: 340px;
+    max-width: 100%;
+    perspective: 1000px;
+}
+
+.tarjeta-tres .card {
+    width: 100%;
+    height: 100%;
+    box-shadow:
+        0 27px 55px 0 rgba(0, 0, 0, 0.4),
+        0 17px 17px 0 rgba(0, 0, 0, 0.3);
+
+    position: relative;
+    transform: rotate(0deg);
+    transform-origin: 100% 0%;
+    transform-style: preserve-3d;
+    transition: .8s ease-in-out;
+}
+
+.tarjeta-tres .logo {
+    width: 200px;
+    height: 200px;
+    position: relative;
+
+    background:
+        linear-gradient(45deg, #F5AF69 50%, #F4EED7 50.9%),
+        linear-gradient(90deg, #FC5135 50%, #4E203C 50%),
+        linear-gradient(-45deg, #F5AF69 50%, #E8D9A0 50.9%),
+        linear-gradient(#FC5135 50%, #4E203C 50%),
+        linear-gradient(-45deg, #F5AF69 50%, #E8D9A0 50.9%),
+        linear-gradient(90deg, #FC5135 50%, #4E203C 50%),
+        linear-gradient(45deg, #FC5135 50%, #F5AF69 50.9%);
+
+    background-size:
+        50px 50px,
+        100px 50px,
+        50px 50px,
+        200px 100px,
+        50px 50px,
+        100px 50px,
+        50px 50px;
+
+    background-repeat: no-repeat;
+
+    background-position:
+        0 0,
+        50px 0,
+        150px 0,
+        0 50px,
+        0 150px,
+        50px 150px,
+        150px 150px;
+}
+
+.tarjeta-tres .logo span {
+    display: block;
+    background: #4E203C;
+    width: 29px;
+    height: 32px;
+    position: absolute;
+    top: 99.5px;
+    left: 130px;
+    border-radius: 0 50% 50% 0;
+}
+
+.tarjeta-tres .front,
+.tarjeta-tres .back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    backface-visibility: hidden;
+}
+
+.tarjeta-tres .front {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    transform: rotateY(0deg);
+}
+
+.tarjeta-tres .back {
+    transform: rotateY(-180deg);
+    font-family: 'Arimo', sans-serif;
+}
+
+.tarjeta-tres .container:hover .card {
+    transform: rotateY(180deg) translateX(100%);
+    cursor: pointer;
+}
+
+.tarjeta-tres .back ul {
+    margin: 0;
+    width: 100%;
+    list-style: none;
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    padding: 0 1%;
+}
+
+.tarjeta-tres .back ul::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.tarjeta-tres .back li {
+    width: 31.333%;
+    margin: 0 1%;
+    float: left;
+    padding: 10px;
+    border: 2px solid #FC5135;
+    border-radius: 4px;
+    position: relative;
+    text-align: center;
+    color: #4E203C;
+    font-size: 13px;
+}
+
+.tarjeta-tres .back li::before {
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    margin-left: -15px;
+    width: 30px;
+    height: 30px;
+    background: #FC5135;
+    color: white;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    font-family: FontAwesome;
+}
+
+.tarjeta-tres .back li:nth-child(1)::before {
+    content: "\f095";
+}
+
+.tarjeta-tres .back li:nth-child(2)::before {
+    content: "\f003";
+}
+
+.tarjeta-tres .back li:nth-child(3)::before {
+    content: "\f0c1";
+}
+
+.tarjeta-tres .back h1 {
+    color: #FC5135;
+    text-transform: uppercase;
+    font-weight: 400;
+    line-height: 1;
+    margin-top: 110px;
+    text-align: center;
+    font-size: 32px;
+}
+
+.tarjeta-tres .back h1 span {
+    color: #4E203C;
+    display: block;
+    font-size: .45em;
+    letter-spacing: 3px;
+}
+
+@media (max-width: 650px) {
+    .tarjeta-tres .container {
+        height: 280px;
+    }
+
+    .tarjeta-tres .back h1 {
+        font-size: 23px;
+        margin-top: 65px;
+    }
+
+    .tarjeta-tres .back li {
+        font-size: 10px;
+        padding: 5px 2px;
+    }
+}
